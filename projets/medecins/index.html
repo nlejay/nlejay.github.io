@@ -1,0 +1,864 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://monsite.fr/projets/medecins/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Densité de médecins - Portfolio de projets data / Nicolas Lejay</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4051b5">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cartographie-de-la-densite-de-medecins-generalistes-par-bassin-de-vie" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Portfolio de projets data / Nicolas Lejay" class="md-header__button md-logo" aria-label="Portfolio de projets data / Nicolas Lejay" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Portfolio de projets data / Nicolas Lejay
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Densité de médecins
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Accueil
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        Projets
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../APropos/" class="md-tabs__link">
+        Mon parcours
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Portfolio de projets data / Nicolas Lejay" class="md-nav__button md-logo" aria-label="Portfolio de projets data / Nicolas Lejay" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Portfolio de projets data / Nicolas Lejay
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Accueil
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Projets
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Projets" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Projets
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          --------- Python ---------
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="--------- Python ---------" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          --------- Python ---------
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Densité de médecins
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Densité de médecins
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problematique" class="md-nav__link">
+    Problématique
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nettoyage-des-donnees" class="md-nav__link">
+    Nettoyage des données
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jointure-des-tables" class="md-nav__link">
+    Jointure des tables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calcul-des-densites" class="md-nav__link">
+    Calcul des densités
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creation-de-la-carte" class="md-nav__link">
+    Création de la carte
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../seismes/" class="md-nav__link">
+        Séismes dans le monde en 2022
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          --------- Tableur ---------
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="--------- Tableur ---------" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          --------- Tableur ---------
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ips/" class="md-nav__link">
+        Indice de Position Sociale des lycées
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Mon parcours
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mon parcours" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Mon parcours
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../APropos/" class="md-nav__link">
+        A propos de moi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../competences/" class="md-nav__link">
+        Compétences pour la Data Science
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../experience/" class="md-nav__link">
+        Expérience professionnelle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../formation/" class="md-nav__link">
+        Formation/Diplômes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="cartographie-de-la-densite-de-medecins-generalistes-par-bassin-de-vie">Cartographie de la densité de médecins généralistes par bassin de vie</h1>
+<hr />
+<figure>
+    <img src="../../img/medecins/densite_medecins.jpg"}>
+</figure>
+
+<h2 id="problematique">Problématique</h2>
+<hr />
+<p>L'idée de ce projet était d'établir en Python une carte choroplèthe indiquant la densité de médecins généralistes par bassin de vie en France métropolitaine. 
+Cette page est un résumé du travail effectué. Le notebook contenant l'ensemble du code se trouve <a href="https://github.com/nlejay/density_map_doctors">ici.</a></p>
+<p><strong>Données utilisées</strong></p>
+<ul>
+<li>un fichier .xlsx regroupant le nombre de médecins généralistes par commune (source : Observatoire des territoires / année 2020)</li>
+<li>un fichier .csv contenant la population de chaque commune au recensement de 2019 (source : INSEE)</li>
+<li>un fichier .geojson regroupant les bassins de vie ainsi que leurs contours géographiques (source : INSEE)</li>
+<li>un fichier .geojson des différentes communes françaises avec leur données géographiques (source : https://github.com/gregoiredavid/france-geojson )</li>
+</ul>
+<p>On peut voir que les données sur la population et le nombre de médecins ne sont pas de la même année. Mais à une année près, il y a peu de chances qu'il y ait eu une forte variation de ces données. De même en 2022 la population et le nombre de médecins des communes a sans-doute un peu changé mais le résultat obtenu pour l'année 2020 donne une bonne idée de la densité de médecins par bassin de vie aujourd'hui en 2022.</p>
+<p><strong>Modules utilisés</strong></p>
+<p>Comme dit aupravant, j'ai utilisé le langage Python pour réaliser cette carte. Voici les modules que j'ai utilisés :</p>
+<ul>
+<li>le module <strong>pandas</strong> pour lire les fichiers csv et xlsx, convertir les données en dataframes et faire des jointures de ces dataframes</li>
+<li>le module <strong>geopandas</strong> pour lire les fichiers geojson, convertir les données en GeoDataFrames ainsi que pour faire des jointures spatiales</li>
+<li>le module <strong>matplotlib</strong> pour la création de la carte</li>
+</ul>
+<h2 id="nettoyage-des-donnees">Nettoyage des données</h2>
+<hr />
+<p>La première opération a été de nettoyer les données. Je ne présenterai pas le code correspondant à cette partie ici (se référer au <a href="https://github.com/nlejay/density_map_doctors/blob/main/medecins.ipynb">notebook</a>). Voici ce que j'ai pu observer et faire :</p>
+<ul>
+<li>Il n'y avait pas de données manquantes dans les fichiers. Je n'ai rien eu à faire de ce côté.</li>
+<li>Il n'y avait pas de données en doublons.</li>
+<li>Il n'y avait pas de données abbérantes.</li>
+<li>En revanche, la population de chaque commune était au format <em>str</em>. J'ai donc converti cette variable au format <em>int</em>.</li>
+<li>Le nombre de communes n'était pas le même dans chaque fichier. Après inspection, je me suis rendu compte que certains fichiers ne contenaient que les données de France métropolitaine alors que d'autres contenaient aussi des données de communes d'outre-mer. De plus, dans le fichier sur les contours géographiques des communes, les communes de Paris, Lyon et Marseille étaient divisées selon leurs arrondissements. Il a donc fallu faire en sorte qu'il n'y ait plus qu'une ligne pour chacune de ces villes. Dans le cas contraire, cela aurait posé problème lors des jointures avec les autres tables.</li>
+<li>J'ai enfin supprimé des colonnes dont je n'avais pas besoin dans les dataframes.  </li>
+</ul>
+<h2 id="jointure-des-tables">Jointure des tables</h2>
+<hr />
+<p>Arrivé à ce stade, les données utiles se trouvent dans quatre dataframes différents :</p>
+<ul>
+<li><em>pop_com</em> présentant la population des communes</li>
+</ul>
+<p><img alt="pop_com" src="../../img/medecins/pop_com.png" /></p>
+<ul>
+<li><em>medecins</em> présentant le nombre de médecins par commune</li>
+</ul>
+<p><img alt="medecins" src="../../img/medecins/medecins.png" /></p>
+<ul>
+<li><em>communes</em> regroupant les contours géographiques des communes</li>
+</ul>
+<p><img alt="communes" src="../../img/medecins/communes.png" /></p>
+<ul>
+<li><em>bassins</em> regroupant les contours géographiques des bassins de vie</li>
+</ul>
+<p><img alt="bassins" src="../../img/medecins/bassins.png" /></p>
+<p>J'ai commencé par faire une jointure entre <em>pop_com</em> et <em>medecins</em>. J'ai appelé la dataframe obtenue <em>med_pop_com</em>.</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">med_pop_com</span> <span class="o">=</span> <span class="n">pop_com</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">medecins</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;Code&#39;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;codgeo&#39;</span><span class="p">)</span>
+<span class="n">med_pop_com</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+<img alt="med_pop_com" src="../../img/medecins/med_pop_com.png" /></p>
+<p>Ensuite, je n'ai gardé que les colonnes utiles et j'ai fait une jointure avec <em>communes</em>. La dataframe obtenue (<em>med_pop_geo_com</em>) regroupe donc toutes les données sur les communes (population, nombre de médecins et contours géographiques).</p>
+<div class="highlight"><pre><span></span><code><span class="n">med_pop_com</span> <span class="o">=</span> <span class="n">med_pop_com</span><span class="p">[[</span><span class="s1">&#39;Code&#39;</span><span class="p">,</span> <span class="s1">&#39;Libellé&#39;</span><span class="p">,</span> <span class="s1">&#39;Population municipale 2019&#39;</span><span class="p">,</span> <span class="s1">&#39;nb_medg&#39;</span><span class="p">]]</span>
+<span class="n">med_pop_geo_com</span> <span class="o">=</span> <span class="n">med_pop_com</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">communes</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;Code&#39;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;INSEE_COM&#39;</span><span class="p">)</span>
+<span class="n">med_pop_geo_com</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="med_pop_geo_com" src="../../img/medecins/med_pop_geo_com.png" /></p>
+<p>Il restait alors à faire la jointure avec les données sur les bassins de vie. Le problème était que je ne disposais pas de colones communes dans les deux tables med_pop_geo_com et bassins. J'ai contourné le problème en faisant une <strong>jointure spatiale</strong>.</p>
+<p>Pour faire cette jointure spatiale, j'ai décidé de calculer les coordonnées du centre géographique de chaque commune. Puis j'ai fais une jointure en sélectionnant pour chaque bassin de vie les communes dont le centre se situe dans le bassin. J'ai utilisé le paramètre <code>contains</code> de la méthode <code>sjoin</code> du module <code>geopandas</code>. J'ai appelé la dataframe finale <em>df_total</em>.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Avec les jointures, on se retrouve avec une dataframe et non une geodataframe. Il faut faire une conversion</span>
+<span class="n">med_pop_geo_com</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">med_pop_geo_com</span><span class="p">)</span>
+
+<span class="c1">#Création des centres de chaque commune</span>
+<span class="n">med_pop_geo_com</span><span class="p">[</span><span class="s1">&#39;centre&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">med_pop_geo_com</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">centroid</span>
+
+<span class="c1">#suppression de la colonne geometry</span>
+<span class="n">med_pop_geo_com</span> <span class="o">=</span> <span class="n">med_pop_geo_com</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;geometry&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1">#Renommer la colonne centre avec le nom geometry (pour la jointure avec sjoin)</span>
+<span class="n">med_pop_geo_com</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;centre&#39;</span><span class="p">:</span><span class="s1">&#39;geometry&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Jointure</span>
+<span class="n">df_total</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">sjoin</span><span class="p">(</span><span class="n">bassins</span><span class="p">,</span> <span class="n">med_pop_geo_com</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">predicate</span><span class="o">=</span><span class="s1">&#39;contains&#39;</span><span class="p">)</span>
+<span class="n">df_total</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="df_total" src="../../img/medecins/df_total.png" /></p>
+<h2 id="calcul-des-densites">Calcul des densités</h2>
+<hr />
+<p>Pour faire le calcul de densité de médecins par bassin de vie, il faut connaître la population totale de chaque bassin ainsi que son nombre de médecins. Puis il n'y a plus qu'à faire le quotient de ces quantités et multiplier par 100 000 pour obtenir le nombre de médecins pour 100 000 habitants.</p>
+<p>Enfin, il suffit de faire une nouvelle jointure entre la nouvelle dataframe obtenue et <em>df_total</em>.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Population et nombre de médecins par bassin</span>
+<span class="n">df_par_bassin</span> <span class="o">=</span> <span class="n">df_total</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;bv2012_code&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;nb_medg&#39;</span><span class="p">:</span><span class="s1">&#39;sum&#39;</span><span class="p">,</span> <span class="s1">&#39;Population municipale 2019&#39;</span><span class="p">:</span><span class="s1">&#39;sum&#39;</span><span class="p">})</span>
+
+<span class="c1"># Densité de médecins (nb pour 100 000 hbts)</span>
+<span class="n">df_par_bassin</span><span class="p">[</span><span class="s1">&#39;densite&#39;</span><span class="p">]</span><span class="o">=</span><span class="nb">round</span><span class="p">(</span><span class="n">df_par_bassin</span><span class="p">[</span><span class="s1">&#39;nb_medg&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">df_par_bassin</span><span class="p">[</span><span class="s1">&#39;Population municipale 2019&#39;</span><span class="p">]</span><span class="o">*</span><span class="mi">100000</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># Sélection des colones de df_total qui serviront par la suite</span>
+<span class="n">df_total</span> <span class="o">=</span> <span class="n">df_total</span><span class="p">[[</span><span class="s1">&#39;bv2012_name_upper&#39;</span><span class="p">,</span> <span class="s1">&#39;bv2012_code&#39;</span><span class="p">,</span> <span class="s1">&#39;geometry&#39;</span><span class="p">]]</span>
+<span class="n">df_par_bassin</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Population municipale 2019&#39;</span><span class="p">:</span><span class="s1">&#39;population&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># jointure finale (avec suppression des doublons dus à la jointure)</span>
+<span class="n">df_final</span> <span class="o">=</span> <span class="n">df_total</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_par_bassin</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;bv2012_code&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">)</span>
+<span class="n">df_final</span> <span class="o">=</span> <span class="n">df_final</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
+<span class="n">df_final</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="df_final2" src="../../img/medecins/df_final2.png" /></p>
+<h2 id="creation-de-la-carte">Création de la carte</h2>
+<hr />
+<p>Avant de créer la carte, on peut observer les principaux paramètres statistiques de la densité de médecins.</p>
+<div class="highlight"><pre><span></span><code><span class="n">df_final</span><span class="p">[</span><span class="s1">&#39;densite&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="stats_densite" src="../../img/medecins/stats_densite.png" /></p>
+<div class="admonition remarque">
+<p class="admonition-title">Remarque</p>
+<p>On peut remarquer qu'il existe des bassins à densité nulle. Après exploration des données, on trouve qu'il s'agit des bassins de l'Île d'Yeu et de Arzacq-Arraziguet. Après une recherche sur internet, il semble exister une maison médicale dans ces bassins mais qui n'a sans-doute pas été comptabilisée comme médecin généraliste dans les données de l'Observatoire des territoires.</p>
+</div>
+<p>On peut ensuite faire une carte choroplèthe de ces densités de médecins. Pour cela, j'ai regroupé les bassins de vie par classe. La délimitation des classes s'est faite par quartiles. Puis j'ai utilisé les modules geopandas et matplotlib pour créer la carte.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Création des classes</span>
+<span class="n">df_final</span><span class="p">[</span><span class="s1">&#39;classe&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">qcut</span><span class="p">(</span><span class="n">df_final</span><span class="p">[</span><span class="s1">&#39;densite&#39;</span><span class="p">],</span> <span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;0 - 63,7&#39;</span><span class="p">,</span> <span class="s1">&#39;63,7 - 80&#39;</span><span class="p">,</span> <span class="s1">&#39;80 - 98,7&#39;</span><span class="p">,</span> <span class="s1">&#39;+98,7&#39;</span><span class="p">])</span>
+
+<span class="c1"># Création d&#39;une dataframe avec les coordonnées de villes à faire apparaître sur la carte</span>
+<span class="n">liste_villes</span><span class="o">=</span><span class="p">[{</span><span class="s1">&#39;ville&#39;</span><span class="p">:</span><span class="s1">&#39;Paris&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">:</span><span class="mf">48.85341</span><span class="p">,</span> <span class="s1">&#39;long&#39;</span><span class="p">:</span><span class="mf">2.3488</span><span class="p">},</span>
+             <span class="p">{</span><span class="s1">&#39;ville&#39;</span><span class="p">:</span><span class="s1">&#39;Marseille&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">:</span><span class="mf">43.299999</span><span class="p">,</span> <span class="s1">&#39;long&#39;</span><span class="p">:</span><span class="mf">5.4</span><span class="p">},</span>
+             <span class="p">{</span><span class="s1">&#39;ville&#39;</span><span class="p">:</span><span class="s1">&#39;Lyon&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">:</span><span class="mf">45.7640430</span><span class="p">,</span> <span class="s1">&#39;long&#39;</span><span class="p">:</span><span class="mf">4.8356590</span><span class="p">},</span>
+             <span class="p">{</span><span class="s1">&#39;ville&#39;</span><span class="p">:</span><span class="s1">&#39;Toulouse&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">:</span><span class="mf">43.6046520</span><span class="p">,</span> <span class="s1">&#39;long&#39;</span><span class="p">:</span><span class="mf">1.4442090</span><span class="p">},</span>
+             <span class="p">{</span><span class="s1">&#39;ville&#39;</span><span class="p">:</span><span class="s1">&#39;Bordeaux&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">:</span><span class="mf">44.8377890</span><span class="p">,</span> <span class="s1">&#39;long&#39;</span><span class="p">:</span><span class="o">-</span><span class="mf">0.5791800</span><span class="p">},</span>
+             <span class="p">{</span><span class="s1">&#39;ville&#39;</span><span class="p">:</span><span class="s1">&#39;Nantes&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">:</span><span class="mf">47.2183710</span><span class="p">,</span> <span class="s1">&#39;long&#39;</span><span class="p">:</span><span class="o">-</span><span class="mf">1.5536210</span><span class="p">},</span>
+             <span class="p">{</span><span class="s1">&#39;ville&#39;</span><span class="p">:</span><span class="s1">&#39;Lille&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">:</span><span class="mf">50.6292500</span><span class="p">,</span> <span class="s1">&#39;long&#39;</span><span class="p">:</span><span class="mf">3.0572560</span><span class="p">},</span>
+             <span class="p">{</span><span class="s1">&#39;ville&#39;</span><span class="p">:</span><span class="s1">&#39;Strasbourg&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">:</span><span class="mf">48.5734053</span><span class="p">,</span> <span class="s1">&#39;long&#39;</span><span class="p">:</span><span class="mf">7.7521113</span><span class="p">},</span>
+             <span class="p">{</span><span class="s1">&#39;ville&#39;</span><span class="p">:</span><span class="s1">&#39;Brest&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">:</span><span class="mf">48.3903940</span><span class="p">,</span> <span class="s1">&#39;long&#39;</span><span class="p">:</span><span class="o">-</span><span class="mf">4.4860760</span><span class="p">},</span>
+             <span class="p">{</span><span class="s1">&#39;ville&#39;</span><span class="p">:</span><span class="s1">&#39;Orléans&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">:</span><span class="mf">47.90289</span><span class="p">,</span> <span class="s1">&#39;long&#39;</span><span class="p">:</span> <span class="mf">1.9038900</span><span class="p">},</span>
+             <span class="p">{</span><span class="s1">&#39;ville&#39;</span><span class="p">:</span><span class="s1">&#39;Poitiers&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">:</span><span class="mf">46.58333</span><span class="p">,</span> <span class="s1">&#39;long&#39;</span><span class="p">:</span> <span class="mf">0.33333</span><span class="p">},</span>
+             <span class="p">{</span><span class="s1">&#39;ville&#39;</span><span class="p">:</span><span class="s1">&#39;Caen&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">:</span><span class="mf">49.18585</span><span class="p">,</span> <span class="s1">&#39;long&#39;</span><span class="p">:</span>  <span class="o">-</span><span class="mf">0.35912</span><span class="p">},</span>
+             <span class="p">{</span><span class="s1">&#39;ville&#39;</span><span class="p">:</span><span class="s1">&#39;Ajaccio&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">:</span><span class="mf">41.92723</span><span class="p">,</span> <span class="s1">&#39;long&#39;</span><span class="p">:</span> <span class="mf">8.73462</span><span class="p">}]</span>
+
+<span class="n">df_villes</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">liste_villes</span><span class="p">)</span>
+
+<span class="c1">#Transformation de la dataframe des villes en geodataframe</span>
+<span class="n">gdf_villes</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">df_villes</span><span class="p">,</span> <span class="n">geometry</span><span class="o">=</span><span class="n">gpd</span><span class="o">.</span><span class="n">points_from_xy</span><span class="p">(</span><span class="n">df_villes</span><span class="o">.</span><span class="n">long</span><span class="p">,</span> <span class="n">df_villes</span><span class="o">.</span><span class="n">lat</span><span class="p">))</span>
+
+<span class="c1">#création de la figure</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
+
+<span class="c1">#Suppression des axes</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">get_xaxis</span><span class="p">()</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">get_yaxis</span><span class="p">()</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1">#legende</span>
+<span class="n">leg_kwds</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;title&#39;</span> <span class="p">:</span> <span class="s1">&#39;Nombre de médecins pour 100 000 hbts&#39;</span><span class="p">,</span> <span class="s1">&#39;loc&#39;</span><span class="p">:</span><span class="s1">&#39;lower left&#39;</span><span class="p">,</span> <span class="s1">&#39;fontsize&#39;</span><span class="p">:</span><span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;title_fontsize&#39;</span><span class="p">:</span><span class="mi">11</span><span class="p">}</span>
+
+<span class="c1">#création de la carte</span>
+<span class="n">df_final</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39;classe&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;OrRd&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">legend_kwds</span><span class="o">=</span><span class="n">leg_kwds</span><span class="p">)</span>
+
+<span class="c1">#titre et notes</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Densité de médecins généralistes par bassin de vie&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">17</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figtext</span><span class="p">(</span><span class="mf">0.53</span><span class="p">,</span> <span class="mf">0.06</span><span class="p">,</span>
+            <span class="s2">&quot;Données sur la population française : INSEE (recensement 2019) </span><span class="se">\n</span><span class="s2"> Données sur les médecins : Observatoire des territoires (année 2020) </span><span class="se">\n</span><span class="s2"> Données géographiques des bassins de vie : INSEE&quot;</span><span class="p">,</span>
+            <span class="n">style</span><span class="o">=</span><span class="s1">&#39;italic&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span> <span class="n">bbox</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;facecolor&quot;</span><span class="p">:</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="s2">&quot;edgecolor&quot;</span><span class="p">:</span><span class="s2">&quot;white&quot;</span><span class="p">,</span><span class="s2">&quot;alpha&quot;</span><span class="p">:</span><span class="mf">0.5</span><span class="p">,</span> <span class="s2">&quot;pad&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">})</span>
+<span class="c1"># Placement des points</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df_villes</span><span class="o">.</span><span class="n">long</span><span class="p">,</span><span class="n">df_villes</span><span class="o">.</span><span class="n">lat</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="c1"># Placement des noms de villes</span>
+<span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">boxstyle</span><span class="o">=</span><span class="s2">&quot;round&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">_</span><span class="p">,</span><span class="n">row</span> <span class="ow">in</span> <span class="n">df_villes</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+   <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;long&#39;</span><span class="p">]</span><span class="o">+</span><span class="mf">0.13</span><span class="p">,</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">]</span><span class="o">+</span><span class="mf">0.13</span><span class="p">,</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;ville&#39;</span><span class="p">],</span><span class="n">fontsize</span><span class="o">=</span><span class="s1">&#39;large&#39;</span><span class="p">,</span> <span class="n">bbox</span><span class="o">=</span><span class="n">bbox</span><span class="p">)</span>
+
+<span class="c1">#Affichage</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<figure>
+    <img src="../../img/medecins/densite_medecins.jpg"}>
+</figure>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Accueil" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Accueil
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../seismes/" class="md-footer__link md-footer__link--next" aria-label="Next: Séismes dans le monde en 2022" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Séismes dans le monde en 2022
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "navigation.indexes", "toc.integrate"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>
