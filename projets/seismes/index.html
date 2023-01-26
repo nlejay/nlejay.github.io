@@ -613,7 +613,8 @@
 
 <h2 id="problematique">Problématique</h2>
 <hr />
-<p>Ce mini-projet a pour seul but de créer une carte représentant les séismes de magnitude supérieure à 4,5 ayant eu lieu en 2022. Le choix de prendre les séismes de magnitude supérieure à 4,5 a été fait pour ne considérer que les séismes les plus importants. On ignore donc ici une grande partie des tremblements de terre car beaucoup ont une magnitude inférieure à 4,5, voire ne sont même pas ressentis par l'homme (magnitude inférieure à 3).</p>
+<p>Ce mini-projet a pour seul but de créer une carte représentant les séismes de magnitude supérieure à 4,5 ayant eu lieu en 2022. Le choix de prendre les séismes de magnitude supérieure à 4,5 a été fait pour ne considérer que les séismes les plus importants. On ignore donc ici une grande partie des tremblements de terre car beaucoup ont une magnitude inférieure à 4,5 voire ne sont même pas ressentis par l'homme (magnitude inférieure à 3).</p>
+<p>Le notebook contenant le code ainsi que les fichiers de données sont disponibles <a href="https://github.com/nlejay/carte_seismes_2022">ici</a>.</p>
 <h2 id="importation-des-donnees-et-selection-des-variables-utiles">Importation des données et sélection des variables utiles</h2>
 <hr />
 <p>Les données sont issues de l'US Geological Survey (https://www.usgs.gov/programs/earthquake-hazards/earthquakes, 2023). Le site de l'USGS limite le nombre de données téléchargeables en un seul fichier. Il a donc été nécessaire de télécharger deux fichiers (format geojson) pour obtenir l'ensemble des séismes. La première étape a donc été d'importer les deux fichiers sous forme de deux dataframes avec le module <em>geopandas</em>, puis de les concaténer. Avant de faire cela, je me suis bien-sûr assuré que les deux dataframes contenaient les mêmes colonnes et qu'il n'y avait pas de problèmes de données manquantes dans ces colonnes.</p>
@@ -635,18 +636,20 @@
 <span class="n">df_seismes</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </code></pre></div>
 <p><img alt="dataframe" src="../../img/seismes/dataframe.png" /></p>
-<p>On se retrouve avec une seule table dans la quelle on peut vérifier qu'il n'y a pas de doublons grâce à la méthode <code>duplicated</code> du module <code>pandas</code>. Étant donné que ce n'est pas le cas, passons à la suite.</p>
+<p>On se retrouve avec une seule table dans laquelle on peut vérifier qu'il n'y a pas de doublons grâce à la méthode <code>duplicated</code> du module <code>pandas</code>. Étant donné que ce n'est pas le cas, passons à la suite.</p>
 <h2 id="courte-description-des-seismes">Courte description des séismes</h2>
 <hr />
 <p>On peut obtenir un résumé statistique de la magnitude des séismes à l'aide de la méthode <code>describe</code> de <code>pandas</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">df_seismes</span><span class="p">[</span><span class="s1">&#39;mag&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 </code></pre></div>
 <p><img alt="stats_seismes" src="../../img/seismes/stats_seismes.png" /></p>
-<p>On s'aperçoit alors qu'en 2022 :
-   - Il y a eu 8114 séismes de magnitude supérieure à 4,5.
-   - Le séisme le plus important a eu une magnitude de 7,6.
-   - 50 % des séismes étaient de magnitudes inférieures ou égales à 4,7.
-   - 75 % des séismes étaient de magnitudes inférieures ou égales à 4,9.</p>
+<p>On s'aperçoit alors qu'en 2022 :</p>
+<ul>
+<li>Il y a eu 8114 séismes de magnitude supérieure à 4,5.</li>
+<li>Le séisme le plus important a eu une magnitude de 7,6.</li>
+<li>50 % des séismes étaient de magnitudes inférieures ou égales à 4,7.</li>
+<li>75 % des séismes étaient de magnitudes inférieures ou égales à 4,9.</li>
+</ul>
 <p>Les séismes de magnitude élevée sont donc plutôt rares (heureusement pour nous !). On peut tracer un histogramme de ces séismes pour mieux se rendre compte de leur distribution suivant la magnitude.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
@@ -667,8 +670,8 @@
 <p>On voit bien que très peu de séismes ont une forte magnitude.</p>
 <h2 id="carte-des-seismes">Carte des séismes</h2>
 <hr />
-<p>Passons à ce qui nous intéresse : la carte des séismes. Pour réaliser cette carte, j'ai tracé un nuage de points (scatterplot) représentant chaque séisme suivant sa longitude en abscisse et sa latitute en ordonnée. Ce nuage de points se fait par dessus un fond de carte du monde. Il nous faut donc importer les données permettant d'afficher ce fond de carte. Là-aussi, j'ai utilisé un fichier geojson.</p>
-<p>Pour créer une carte, il faut définir le type de projection du gloge terrestre sur un plan. Ici j'ai utilisé la projection Mercator.</p>
+<p>Passons à ce qui nous intéresse : la carte des séismes. Pour réaliser cette carte, j'ai tracé un nuage de points (scatterplot) représentant chaque séisme suivant sa longitude en abscisse et sa latitude en ordonnée. Ce nuage de points se fait par dessus un fond de carte du monde. Il nous faut donc importer les données permettant d'afficher ce fond de carte. Là-aussi, j'ai utilisé un fichier geojson.</p>
+<p>Pour créer une carte, il faut définir le type de projection du globe terrestre sur un plan. Ici j'ai utilisé la projection Mercator.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Chargement du fichier</span>
 <span class="n">carte</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;world_map.json&#39;</span><span class="p">)</span>
 
@@ -680,10 +683,12 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
 <p><img alt="fond_carte" src="../../img/seismes/fond_carte.png" /></p>
-<p>Comme on peut le voir, nous avons notre fond de carte. Il ne nous reste plus qu'à en modifier l'aspect et représenter les séismes par des disques. Mais pour cela il faut :
-- convertir les données géospatiales de <em>df_seismes</em> pour avoir le même CRS (projection Mercator)
-- récupérer la longitude et la latitude de chaque séisme dans la colonne geometry</p>
-<p>On peut ensuite créer la carte en utilisant des points de différentes couleurs (voir le paramètre <code>c</code> de la méthode <code>scatter</code> de <code>matplotlib</code> qui indique quelles données utiliser pour la taille des points et le paramètre <code>cmap</code> qui donne l'échelle de couleurs à utiliser) mais aussi de différentes tailles. Pour cela, j'ai créé une liste des tailles en fonction de la magnitude des séismes.</p>
+<p>Comme on peut le voir, nous avons notre fond de carte. Il ne nous reste plus qu'à en modifier l'aspect et représenter les séismes par des disques. Mais pour cela il faut :</p>
+<ul>
+<li>convertir les données géospatiales de <em>df_seismes</em> pour avoir le même CRS (projection Mercator)</li>
+<li>récupérer la longitude et la latitude de chaque séisme dans la colonne geometry</li>
+</ul>
+<p>On peut ensuite créer la carte en utilisant des points de différentes couleurs (voir le paramètre <code>c</code> de la méthode <code>scatter</code> de <code>matplotlib</code> qui indique quelles données utiliser pour la couleur des points et le paramètre <code>cmap</code> qui donne l'échelle de couleurs à utiliser) mais aussi de différentes tailles. Pour cela, j'ai créé une liste <code>s</code> des tailles en fonction de la magnitude des séismes.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Changement CRS</span>
 <span class="n">df_seismes</span><span class="o">=</span><span class="n">df_seismes</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="s1">&#39;EPSG:3395&#39;</span><span class="p">)</span>
 <span class="c1"># Création de colonnes correspondant à la latitude et la longitude de chaque seisme</span>

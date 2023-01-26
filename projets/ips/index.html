@@ -621,7 +621,8 @@
 <h2 id="problematique">Problématique</h2>
 <hr />
 <p>Début 2023, le ministère de l'éducation nationale a dévoilé l'Indice de Position Sociale des lycées français. Cet indice permet d'attribuer une valeur quantitative à l'origine sociale des élèves. Plus l'indice est grand, plus l'élève est issu d'une catégorie sociale considérée comme favorable à sa réussite scolaire. Cet indicateur est calculé à partir de plusieurs critères : diplômes des parents, conditions matérielles dans le foyer (nombre de pièces du logement, chambre seul, ordinateur,...), revenus des parents,... L'IPS attribué à un lycée est une moyenne des IPS des élèves de l'établissement.</p>
-<p>Le but de ce petit projet était d'utiliser les fonctionnalités d'un tableur pour explorer le jeu de données, en tirer des informations et faire quelques représentations graphiques. Je tiens à préciser que je ne fais ici que des constats et qu'aucun jugement sur les résultats ne sera prononcé.</p>
+<p>Le but de ce petit projet était d'utiliser les fonctionnalités d'un tableur pour explorer le jeu de données et en tirer des informations à partir de calculs et de représentations graphiques. Je tiens à préciser que je ne fais ici que des constats et qu'aucun jugement sur les résultats ne sera prononcé.</p>
+<p>Le fichier contenant le travail effectué est disponible <a href="https://github.com/nlejay/IPS_lycees">ici</a> au format xlsx.</p>
 <h2 id="presentation-du-jeu-de-donnees">Présentation du jeu de données</h2>
 <hr />
 <p>Les données représentent la situation des lycées lors de l'année scolaire 2021-2022. Le jeu de données est constitué de 13 colonnes dont voici une description pour les plus importantes :</p>
@@ -632,8 +633,8 @@
 <li><strong>nom_de_la_commune</strong></li>
 <li><strong>secteur</strong> : indique si l'établissement est public ou privé sous contrat</li>
 <li><strong>type_de_lycee</strong> : indique si l'établissement est un LEGT (Lycée d'Enseignement Général et Technologique), un LP (Lycée Professionnel) ou un LPO (Lycée Polyvalent qui regroupe une section GT et une section professionnelle)</li>
-<li><strong>ips_voie_gt</strong> : ips de l'établissement si c'est un LEGT, ips de la seule section GT si c'est un LPO, vide si c'est un LP</li>
-<li><strong>ips_voie_pro</strong> : ips de l'établissement si c'est un LP, ips de la seule section Pro si c'est un LPO, vide si c'est un LEGT</li>
+<li><strong>ips_voie_gt</strong> : IPS de l'établissement si c'est un LEGT, IPS de la seule section GT si c'est un LPO, vide si c'est un LP</li>
+<li><strong>ips_voie_pro</strong> : IPS de l'établissement si c'est un LP, IPS de la seule section Pro si c'est un LPO, vide si c'est un LEGT</li>
 <li><strong>ips_ensemble_gt_pro</strong> : ips de l'ensemble de l'établissement</li>
 </ul>
 <p><img alt="jeu" src="../../img/ips/jeu_donnees.png" /></p>
@@ -645,21 +646,21 @@
 <li>l'IPS médian est de 103,8 ;</li>
 <li>l'IPS le plus petit est de 49,5 et le plus grand est de 159.</li>
 </ul>
-<p>On remarque que la moyenne et la médiane sont proche, ce qui amène à penser à une certaine symétrie de la répartition des établissements selon leur IPS, ce qui est confirmé en traçant un histogramme à l'aide du tableur.</p>
+<p>On remarque que la moyenne et la médiane sont proches, ce qui amène à penser à une certaine symétrie de la répartition des établissements selon leur IPS, ce qui est confirmé en traçant un histogramme à l'aide du tableur.</p>
 <p><img alt="hist" src="../../img/ips/hist_tot.png" /></p>
 <h2 id="comparaison-des-etablissements-suivant-leur-type">Comparaison des établissements suivant leur type</h2>
 <hr />
 <p>Les paramètres précédents n'ont qu'un intérêt limité pour comprendre le jeu de données. On peut pousser l'analyse plus loin en comparant les établissements en fonction de leur type. On peut calculer les mêmes paramètres mais cette fois pour chaque type d'établissement (LGT, LP, LPO). J'ai utilisé pour cela une <code>pivot table</code> (tableau croisé dynamique pour la version française des tableurs).</p>
 <p><img alt="pivot_type" src="../../img/ips/pivot_type.png" /></p>
-<p>On s'aperçoit alors que les LGT accueillent en moyenne des élèves plus favorisés socialement que les LP. Il existe néanmoins des LGT à IPS faible et des LP à IPS élevé. Je ne le présente pas ici mais on peut vérifier dans les données que la position intermédiaire des LPO est due au fait qu'ils comportent à la fois une section GT et une section Pro. Leur section GT accueille en moyenne des élèves à IPS plus élevés que ceux de leur section Pro.</p>
-<p>Pour confirmer cet écart entre les LGT et les LP, regardons la répartition des lycées en fonction de leur type (dans le diagramme ci-dessous, les LPO sont inclus mais leurs section GT ont été incluses aux données des LGT et leur section Pro aux données des LP). Le diagramme montre clairement la différence de population des LGT et des LP.</p>
+<p>On s'aperçoit alors que les LGT accueillent en moyenne des élèves plus favorisés socialement que les LP. Il existe néanmoins des LGT à IPS faible et des LP à IPS élevé. Cela n'est pas présenté dans le tableau ci-dessus mais la position intermédiaire des LPO est due au fait qu'ils comportent à la fois une section GT et une section Pro. Leur section GT accueille en moyenne des élèves à IPS plus élevés que ceux de leur section Pro (108,11 contre 88,29).</p>
+<p>Pour confirmer cet écart entre les LGT et les LP, regardons la répartition des lycées en fonction de leur type (dans le diagramme ci-dessous, les LPO sont inclus mais leur section GT a été incluse aux données des LGT et leur section Pro aux données des LP). Le diagramme montre clairement la différence des populations des LGT et des LP.</p>
 <p><img alt="rep_type" src="../../img/ips/rep_type.png" /></p>
 <details class="note"><summary>Remarque technique</summary><p>Pour réaliser cet histogramme, il faut utiliser deux séries de données : une pour chaque section. Cela est facilité ici par le fait qu'il existe déjà une colonne spécifique regroupant l'IPS des sections GT et une autre pour les sections Pro. Si cela n'avait pas été le cas, il aurait été prossible de faire un tri des données selon le type de l'établissement.</p>
 </details>
-<p>J'ai également calculé la proportion des établissements de chaque type dont l'IPS est supérieur ou égal à l'IPS moyen de l'ensemble des établissements :</p>
+<p>J'ai également calculé la proportion des établissements de chaque type dont l'IPS est supérieur ou égal à la moyenne de l'ensemble des établissements :</p>
 <p><img alt="rep_type" src="../../img/ips/pour_sup_type.png" /></p>
 <p>On s'aperçoit que 84,25 % des LGT ont un IPS supérieur ou égal à l'IPS moyen, ce qui n'est le cas que pour 6,63 % des LP.</p>
-<details class="note"><summary>Remarque technique</summary><p>Pour réaliser ce calcul, j'ai d'abord ajouté une colonne permettant de savoir si un établissement a un IPS supérieur à la moyenne. A l'aide de la fonction <code>IF</code>, j'ai attribué la valeur 1 à l'établissement si son IPS est supérieur à la moyenne et la valeur 0 dans le cas contraire. Il est alors facile avec la fonction <code>COUNTIF</code> (<code>NB.SI</code> en français) de compter les établissements à IPS supérieur.</p>
+<details class="note"><summary>Remarque technique</summary><p>Pour réaliser ce calcul, il  faut compter le nombre de lycées qui sont des LGT et qui ont un IPS supérieur à la moyenne afin de diviser le résultat par le nombre total de LGT. Cela se fait facilement à l'aide de la fonction <code>COUNTIFs</code> (<code>NB.SI.ENS</code> en français).</p>
 </details>
 <p>On peut faire le même type de comparaison sur les 100 établissements aux IPS les plus élevés. On trouve alors que ce sont tous des LGT !</p>
 <p>Concernant les 100 établissements aux IPS les moins élevés, on trouve 75 LP, 21 LPO et seulement 4 LGT. </p>
@@ -667,13 +668,13 @@
 <hr />
 <p>Il est aussi intéressant de comparer les secteurs publics et privés. Là-aussi, à l'aide d'une <code>pivot table</code>, on obtient les résultats suivants :</p>
 <p><img alt="pivot_secteur" src="../../img/ips/pivot_secteur.png" /></p>
-<p>On s'aperçoit qu'en moyenne les lycées privés possèdent des élèves plus favorisés socialement. Mais on remarquera aussi que l'IPS minimal est celui d'unlycée privé et que l'IPS maximal est celui d'un lycée public. Cependant, ces derniers font figure d'exception. En effet, lorsque l'on regarde les 100 établissements les plus favorisés, 80 sont privés et seulement 20 sont publics. Du côté des 100 établissements aux élèvess les moins favorisés, 84 sont publics et seulement 16 sont privés.</p>
+<p>On s'aperçoit qu'en moyenne les lycées privés possèdent des élèves plus favorisés socialement. Mais on remarquera néanmoins que l'IPS minimal est celui d'un lycée privé et que l'IPS maximal est celui d'un lycée public. Cependant, ces derniers font figures d'exception. En effet, lorsque l'on regarde les 100 établissements les plus favorisés, 80 sont privés et seulement 20 sont publics. Du côté des 100 établissements aux élèves les moins favorisés, 84 sont publics et seulement 16 sont privés.</p>
 <p>De même, 65,8 % des lycées privés ont un IPS supérieur à la moyenne alors que ce n'est le cas que de 41,5 % des établissements publics. </p>
 <p>Voici la répartition des lycées suivant leur IPS en fonction de leur secteur :</p>
 <p><img alt="rep_secteur" src="../../img/ips/rep_secteur.png" /></p>
 <p>Pour terminer cette comparaison, on peut voir sur le diagramme ci-dessous que quel que soit le type d'établissement, le secteur privé accueille en moyenne des élèves plus favorisés que le secteur public.</p>
 <p><img alt="barres_secteur_type" src="../../img/ips/barres_secteur_type.png" /></p>
-<details class="note"><summary>Remarque technique</summary><p>Pour réaliser les calculs et les diagrammes de cette partie, j'ai utilisé les mêmes méthodes que pour la partie précédente. La seule chose qui change était de répartir les données suiavnt le secteur plutôt que le type.</p>
+<details class="note"><summary>Remarque technique</summary><p>Pour réaliser les calculs et les diagrammes de cette partie, j'ai utilisé les mêmes méthodes que pour la partie précédente. La seule chose qui change est le fait de répartir les données suivant le secteur plutôt que le type.</p>
 </details>
 
 

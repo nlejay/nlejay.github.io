@@ -623,7 +623,7 @@ Cette page est un résumé du travail effectué. Le notebook contenant l'ensembl
 <li>un fichier .xlsx regroupant le nombre de médecins généralistes par commune (source : Observatoire des territoires / année 2020)</li>
 <li>un fichier .csv contenant la population de chaque commune au recensement de 2019 (source : INSEE)</li>
 <li>un fichier .geojson regroupant les bassins de vie ainsi que leurs contours géographiques (source : INSEE)</li>
-<li>un fichier .geojson des différentes communes françaises avec leur données géographiques (source : https://github.com/gregoiredavid/france-geojson )</li>
+<li>un fichier .geojson des différentes communes françaises avec leurs données géographiques (source : https://github.com/gregoiredavid/france-geojson )</li>
 </ul>
 <p>On peut voir que les données sur la population et le nombre de médecins ne sont pas de la même année. Mais à une année près, il y a peu de chances qu'il y ait eu une forte variation de ces données. De même en 2022 la population et le nombre de médecins des communes a sans-doute un peu changé mais le résultat obtenu pour l'année 2020 donne une bonne idée de la densité de médecins par bassin de vie aujourd'hui en 2022.</p>
 <p><strong>Modules utilisés</strong></p>
@@ -674,8 +674,8 @@ Cette page est un résumé du travail effectué. Le notebook contenant l'ensembl
 <span class="n">med_pop_geo_com</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </code></pre></div>
 <p><img alt="med_pop_geo_com" src="../../img/medecins/med_pop_geo_com.png" /></p>
-<p>Il restait alors à faire la jointure avec les données sur les bassins de vie. Le problème était que je ne disposais pas de colones communes dans les deux tables med_pop_geo_com et bassins. J'ai contourné le problème en faisant une <strong>jointure spatiale</strong>.</p>
-<p>Pour faire cette jointure spatiale, j'ai décidé de calculer les coordonnées du centre géographique de chaque commune. Puis j'ai fais une jointure en sélectionnant pour chaque bassin de vie les communes dont le centre se situe dans le bassin. J'ai utilisé le paramètre <code>contains</code> de la méthode <code>sjoin</code> du module <code>geopandas</code>. J'ai appelé la dataframe finale <em>df_total</em>.</p>
+<p>Il restait alors à faire la jointure avec les données sur les bassins de vie. Le problème était que je ne disposais pas de colonnes communes dans les deux tables <em>med_pop_geo_com</em> et <em>bassins</em>. J'ai contourné le problème en faisant une <strong>jointure spatiale</strong>.</p>
+<p>Pour faire cette jointure spatiale, j'ai décidé de calculer les coordonnées du centre géographique de chaque commune. Puis j'ai fait une jointure en sélectionnant pour chaque bassin de vie les communes dont le centre se situe dans le bassin. J'ai utilisé le paramètre <code>contains</code> de la méthode <code>sjoin</code> du module <code>geopandas</code>. J'ai appelé la dataframe finale <em>df_total</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Avec les jointures, on se retrouve avec une dataframe et non une geodataframe. Il faut faire une conversion</span>
 <span class="n">med_pop_geo_com</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">med_pop_geo_com</span><span class="p">)</span>
 
