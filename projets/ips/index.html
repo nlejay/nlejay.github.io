@@ -478,6 +478,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tableau-de-bord-interactif" class="md-nav__link">
+    Tableau de bord interactif
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -657,7 +664,7 @@
 <p><img alt="hist" src="../../img/ips/hist_tot.png" /></p>
 <h2 id="comparaison-des-etablissements-suivant-leur-type">Comparaison des établissements suivant leur type</h2>
 <hr />
-<p>Les paramètres précédents n'ont qu'un intérêt limité pour comprendre le jeu de données. On peut pousser l'analyse plus loin en comparant les établissements en fonction de leur type. On peut calculer les mêmes paramètres mais cette fois pour chaque type d'établissement (LGT, LP, LPO). J'ai utilisé pour cela une <code>pivot table</code> (tableau croisé dynamique pour la version française des tableurs).</p>
+<p>Les paramètres précédents n'ont qu'un intérêt limité pour comprendre le jeu de données. On peut pousser l'analyse plus loin en comparant les établissements en fonction de leur type. On peut calculer les mêmes paramètres mais cette fois pour chaque type d'établissement (LGT, LP, LPO). J'ai utilisé pour cela une <code>pivot table</code> (tableau croisé dynamique).</p>
 <p><img alt="pivot_type" src="../../img/ips/pivot_type.png" /></p>
 <p>On s'aperçoit alors que les LGT accueillent en moyenne des élèves plus favorisés socialement que les LP. Il existe néanmoins des LGT à IPS faible et des LP à IPS élevé. Cela n'est pas présenté dans le tableau ci-dessus mais la position intermédiaire des LPO est due au fait qu'ils comportent à la fois une section GT et une section Pro. Leur section GT accueille en moyenne des élèves à IPS plus élevés que ceux de leur section Pro (108,11 contre 88,29).</p>
 <p>Pour confirmer cet écart entre les LGT et les LP, regardons la répartition des lycées en fonction de leur type (dans le diagramme ci-dessous, les LPO sont inclus mais leur section GT a été incluse aux données des LGT et leur section Pro aux données des LP). Le diagramme montre clairement la différence des populations des LGT et des LP.</p>
@@ -667,7 +674,7 @@
 <p>J'ai également calculé la proportion des établissements de chaque type dont l'IPS est supérieur ou égal à la moyenne de l'ensemble des établissements :</p>
 <p><img alt="rep_type" src="../../img/ips/pour_sup_type.png" /></p>
 <p>On s'aperçoit que 84,25 % des LGT ont un IPS supérieur ou égal à l'IPS moyen, ce qui n'est le cas que pour 6,63 % des LP.</p>
-<details class="note"><summary>Remarque technique</summary><p>Pour réaliser ce calcul, il  faut compter le nombre de lycées qui sont des LGT et qui ont un IPS supérieur à la moyenne afin de diviser le résultat par le nombre total de LGT. Cela se fait facilement à l'aide de la fonction <code>COUNTIFs</code> (<code>NB.SI.ENS</code> en français).</p>
+<details class="note"><summary>Remarque technique</summary><p>Pour réaliser ce calcul, il  faut compter le nombre de lycées qui sont des LGT et qui ont un IPS supérieur à la moyenne afin de diviser le résultat par le nombre total de LGT. Cela se fait facilement à l'aide de la fonction <code>COUNTIFS</code> (<code>NB.SI.ENS</code> en français).</p>
 </details>
 <p>On peut faire le même type de comparaison sur les 100 établissements aux IPS les plus élevés. On trouve alors que ce sont tous des LGT !</p>
 <p>Concernant les 100 établissements aux IPS les moins élevés, on trouve 75 LP, 21 LPO et seulement 4 LGT. </p>
@@ -697,6 +704,10 @@
 <li>En 2021, la crise du covid-19 était encore bien présente. Beaucoup de lycées ont utilisé un fonctionnement hybride présentiel-distanciel pendant une bonne partie de l'année scolaire. Pour tenir compte des difficultés d'apprentissage des élèves, les épreuves du bac ont été aménagées. Les taux de réussite sont donc à prendre avec du recul.</li>
 <li>Depuis la réforme du lycée initiée en 2019, le contrôle continu a pris une grande place dans le résultats du bac (40 % de la note finale). On peut se demander si tous les établissements jouent le jeu ou si certains ont tendance à gonfler les notes pour obtenir de meilleurs résultats au bac. Est-on noté de la même manière dans tous les lycées de France ?</li>
 </ul>
+<h2 id="tableau-de-bord-interactif">Tableau de bord interactif</h2>
+<hr />
+<p>Pour permettre d'analyser les données pour chaque académie, j'ai choisi de réaliser un tableau de bord interactif. Celui-ci est composé d'un menu déroulant permettant de choisir une académie. La fonction <code>FILTER</code> permet alors de ne faire apparaître que les données des lycées de cette académie. Deux tableaux (IPS par secteur et IPS par type de lycée) ainsi que les deux diagrammes correspondants s'actualisent alors automatiquement.</p>
+<p><img alt="dashboard_interactif" src="../../img/ips/dashboard_interactif.png" /></p>
 
 
 
