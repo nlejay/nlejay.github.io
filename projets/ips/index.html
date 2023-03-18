@@ -437,6 +437,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#competences-mises-en-uvre" class="md-nav__link">
+    Compétences mises en œuvre
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#problematique" class="md-nav__link">
     Problématique
   </a>
@@ -473,7 +480,7 @@
       
         <li class="md-nav__item">
   <a href="#correlation-entre-ips-et-reussite-au-bac" class="md-nav__link">
-    Correlation entre IPS et réussite au bac ?
+    Corrélation entre IPS et réussite au bac ?
   </a>
   
 </li>
@@ -632,6 +639,16 @@
    </center>
 </figure>
 
+<h2 id="competences-mises-en-uvre">Compétences mises en œuvre</h2>
+<hr />
+<ul>
+<li>Nettoyage, validation de données</li>
+<li>Visualisation de données (histogrammes, nuages de points, diagrammes en barres)</li>
+<li>Fonctions d'agrégation classiques</li>
+<li>Tableaux croisés dynamiques</li>
+<li>Fonctions avancées (<code>XLOOKUP</code>, <code>FILTER</code>,...)</li>
+<li>Tableau de bord intéractif</li>
+</ul>
 <h2 id="problematique">Problématique</h2>
 <hr />
 <p>Début 2023, le ministère de l'éducation nationale a dévoilé l'Indice de Position Sociale des lycées français. Cet indice permet d'attribuer une valeur quantitative à l'origine sociale des élèves. Plus l'indice est grand, plus l'élève est issu d'une catégorie sociale considérée comme favorable à sa réussite scolaire. Cet indicateur est calculé à partir de plusieurs critères : diplômes des parents, conditions matérielles dans le foyer (nombre de pièces du logement, chambre seul, ordinateur,...), revenus des parents,... L'IPS attribué à un lycée est une moyenne des IPS des élèves de l'établissement.</p>
@@ -690,7 +707,7 @@
 <p><img alt="barres_secteur_type" src="../../img/ips/barres_secteur_type.png" /></p>
 <details class="note"><summary>Remarque technique</summary><p>Pour réaliser les calculs et les diagrammes de cette partie, j'ai utilisé les mêmes méthodes que pour la partie précédente. La seule chose qui change est le fait de répartir les données suivant le secteur plutôt que le type.</p>
 </details>
-<h2 id="correlation-entre-ips-et-reussite-au-bac">Correlation entre IPS et réussite au bac ?</h2>
+<h2 id="correlation-entre-ips-et-reussite-au-bac">Corrélation entre IPS et réussite au bac ?</h2>
 <hr />
 <p>On peut se poser la question : y-a-t-il une meilleure réussite chez les élèves dont l'IPS est le plus grand ? Regardons s'il existe une corrélation entre le taux de réussite au bac des lycées et leur IPS.</p>
 <p>Pour cela, j'ai utilisé un deuxième jeu de données disponible sur le site <a href="https://data.education.gouv.fr/explore/dataset/fr-en-indicateurs-de-resultat-des-lycees-denseignement-general-et-technologique/table/">data.education.gouv.fr</a>. On trouve dans ce jeu de données le nom et le code UAI des lycées de type GT ainsi qu'un certain nombre de variables dont celle qui nous intéresse : le taux de réussite au baccalauréat en 2021. On peut alors tracer un nuage de points représentant le taux de réussite au bac en fonction de l'IPS des lycées (la droite rouge est la droite de régression linéaire).</p>
@@ -707,7 +724,7 @@
 <h2 id="tableau-de-bord-interactif">Tableau de bord interactif</h2>
 <hr />
 <p>Pour permettre d'analyser les données pour chaque académie, j'ai choisi de réaliser un tableau de bord interactif. Celui-ci est composé d'un menu déroulant permettant de choisir une académie. La fonction <code>FILTER</code> permet alors de ne faire apparaître que les données des lycées de cette académie. Deux tableaux (IPS par secteur et IPS par type de lycée) ainsi que les deux diagrammes correspondants s'actualisent alors automatiquement.</p>
-<p><img alt="dashboard_interactif" src="../../img/ips/dashboard_interactif.png" /></p>
+<p><img alt="dashboard_interactif" src="../../img/ips/dashboard_ips.gif" /></p>
 
 
 
