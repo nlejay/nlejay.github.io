@@ -1,0 +1,847 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://monsite.fr/projets/PBI_accidents/">
+      
+      
+        <link rel="prev" href="../seismes/">
+      
+      
+        <link rel="next" href="../ips/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.5">
+    
+    
+      
+        <title>Accidents de la route - Portfolio de projets data / Nicolas Lejay</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7a7fce14.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#exploration-de-donnees-sur-les-accidents-corporels-de-la-circulation-routiere-en-2021" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Portfolio de projets data / Nicolas Lejay" class="md-header__button md-logo" aria-label="Portfolio de projets data / Nicolas Lejay" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Portfolio de projets data / Nicolas Lejay
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Accidents de la route
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Accueil
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../medecins/" class="md-tabs__link md-tabs__link--active">
+        Projets
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../APropos/" class="md-tabs__link">
+        Mon parcours
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Portfolio de projets data / Nicolas Lejay" class="md-nav__button md-logo" aria-label="Portfolio de projets data / Nicolas Lejay" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Portfolio de projets data / Nicolas Lejay
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Accueil
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Projets
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Projets
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          --------- Python ---------
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          --------- Python ---------
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../medecins/" class="md-nav__link">
+        Densité de médecins
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../seismes/" class="md-nav__link">
+        Séismes dans le monde en 2022
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          --------- Power BI ---------
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          --------- Power BI ---------
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Accidents de la route
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Accidents de la route
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#competences-mises-en-uvre" class="md-nav__link">
+    Compétences mises en œuvre
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problematique" class="md-nav__link">
+    Problématique
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#importation-transformation-et-nettoyage-des-donnees" class="md-nav__link">
+    Importation, transformation et nettoyage des données
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relations-entre-les-tables" class="md-nav__link">
+    Relations entre les tables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creation-du-tableau-de-bord" class="md-nav__link">
+    Création du tableau de bord
+  </a>
+  
+    <nav class="md-nav" aria-label="Création du tableau de bord">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aspect-des-pages" class="md-nav__link">
+    Aspect des pages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#page-sur-les-accidents-mortels-creation-de-nouvelles-mesures" class="md-nav__link">
+    Page sur les accidents mortels - Création de nouvelles mesures
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etude-temporelle-travail-sur-les-dates" class="md-nav__link">
+    Étude temporelle - Travail sur les dates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+          --------- Tableur ---------
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          --------- Tableur ---------
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ips/" class="md-nav__link">
+        Indice de Position Sociale des lycées
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Mon parcours
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Mon parcours
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../APropos/" class="md-nav__link">
+        A propos de moi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../competences/" class="md-nav__link">
+        Compétences pour la Data Science
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../experience/" class="md-nav__link">
+        Expérience professionnelle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../formation/" class="md-nav__link">
+        Formation/Diplômes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="exploration-de-donnees-sur-les-accidents-corporels-de-la-circulation-routiere-en-2021">Exploration de données sur les accidents corporels de la circulation routière en 2021</h1>
+<hr />
+<figure>
+   <center>
+   <a target="_blank" href="../../img/seismes/seismes.png">
+     <img src="../../img/PBI_acc/apercu_gen.png" alt="tableau bord" width=75%>
+   </a>
+   </center>
+</figure>
+
+<h2 id="competences-mises-en-uvre">Compétences mises en œuvre</h2>
+<hr />
+<ul>
+<li>Utilisation de Power Query pour importer, transformer des données, puis les charger dans Power BI.</li>
+<li>Création de visualisations graphiques des données, utilisation de filtres.</li>
+<li>Création de nouvelles colonnes, nouvelles mesures et nouvelles tables de données.</li>
+<li>Travail sur les dates.</li>
+<li>Utilisation de boutons de navigation entre les pages.</li>
+</ul>
+<h2 id="problematique">Problématique</h2>
+<hr />
+<p>Le but de ce projet était de mettre en œuvre mes premières connaissances des fonctionnalités de Microsoft Power BI. J'ai pour cela utilisé un jeu de données regroupant des caractéristiques des accidents corporels de la circulation routière en France en 2021. Ce jeu de données étant très riche, le but n'était pas de l'exploiter complètement mais simplement de mettre en pratique mes compétences et d'en tirer quelques informations à travers un tableau de bord.</p>
+<p><strong>Données utilisées</strong></p>
+<p>J'ai utilisé un jeu de données open data mis à disposition par le ministère de l'intérieur. Ce jeu de données se compose de quatre fichiers CSV :</p>
+<ul>
+<li>le fichier <em>caracteristiques_2021.csv</em> comportant les caractéristiques principales de chaque accident : jour, heure, adresse, conditions climatiques et de luminosité,...</li>
+<li>le fichier <em>lieux_2021.csv</em> qui regroupe des informations plus précises sur le lieu où s'est produit chaque accident : type de voirie, état de la chaussée, profil de la route,...</li>
+<li>le fichier <em>usagers_2021.csv</em> qui regroupe des informations sur les victimes : genre, gravité de la blessure, catégorie de la personne (conducteur, passager, piéton), type de trajet effectué,...</li>
+<li>le fichier <em>vehicules_2021.csv</em> qui regroupe des informations sur les véhicules impliqués dans les accidents : type de véhicule, point du choc,...</li>
+</ul>
+<p>Tous ces fichiers ainsi que le document de description des différentes variables sont accessibles <a href="https://github.com/nlejay/accidents_route_PowerBI">ici</a></p>
+<h2 id="importation-transformation-et-nettoyage-des-donnees">Importation, transformation et nettoyage des données</h2>
+<hr />
+<p>La première opération est d'importer les données. Cela se fait fichier par fichier. Avant de charger les données dans Power BI, il faut vérifier leur type, les données manquantes, les erreurs,...</p>
+<p><strong>Les types de données</strong></p>
+<p>Lors de l'importation, Power query détecte automatiquement le type de données. Mais ce type peut être modifié en fonction de nos besoins. Par exemple pour chaque fichier le numéro d'accident <em>Num_Acc</em> est considéré comme nombre entier par Power Query (voir image ci-dessous). Préférant l'avoir au format texte, je l'ai modifié en choisissant <em>texte</em> dans la liste déroulante du type de données.</p>
+<p><img alt="type_donnees" src="../../img/PBI_acc/type_donnees.png" /></p>
+<p>Le travail de vérification du type de données est à faire pour chaque variable.</p>
+<p><strong>Les erreurs</strong></p>
+<p>A l'importation, la variable <em>actp</em> de la table <em>usagers_2021</em> comportait des erreurs (voir ci-dessous l'indication d'erreurs). Cette variable correspond à l'action du piéton au moment de l'accident si la victime est un piéton. Chaque action est codée par un nombre entier : par exemple, 3 signifie que le piéton traversait la chaussée. </p>
+<p><img alt="erreur_de_données" src="../../img/PBI_acc/col_erreur.png" /></p>
+<p>Alors que toutes les données de la variable devraient être numériques, après recherche je me suis aperçu qu'il existait parfois des données saisies sous forme de caractères. C'est pour ces valeurs que Power Query indique une erreur. Pour corriger le problème, j'ai décidé de créer une nouvelle colonne nommée <em>actp_corr</em> en utilisant la fonctionnalité <em>Colonne personnalisée</em> de Power Query. L'idée est de remplacer chaque erreur par -1, code correspondant à l'absence de renseignement sur l'action du piéton. Il n'est en effet pas possible de retrouver la véritable action du piéton au moment de l'accident. La formule ci-dessous permet pour chaque ligne de récupérer la valeur de la variable si elle est correcte et de remplacer les erreurs par -1.</p>
+<p><img alt="colonne_corrigee" src="../../img/PBI_acc/col_corr.png" /></p>
+<p><strong>Valeurs manquantes</strong></p>
+<p>Certaines variables contiennent des valeurs manquantes (notées <em>null</em>). Ces variables étaient toutes des variables codées par des nombres et dont -1 signifie "Non renseigné". J'ai donc remplacé les valeurs manquantes par -1.</p>
+<p><img alt="valeurs_manquantes" src="../../img/PBI_acc/valeurs_null.png" /> </p>
+<p><img alt="remplacement_val_null" src="../../img/PBI_acc/remplace_val.png" /></p>
+<p><strong>Recodage de variables</strong></p>
+<p>Le fait que les variables soient codées par des valeurs numériques n'est pas pratique pour la constitution de visualisations graphiques. Créer de nouvelles colonnes avec la signification de ces codes est important. Pour cela, on peut utiliser la fonctionnalité <em>Colonne conditionnelle</em> comme sur l'image ci-dessous.</p>
+<p><img alt="colonne_cond" src="../../img/PBI_acc/col_cond.png" /></p>
+<p><strong>Création d'une variable <em>horaire</em> </strong></p>
+<p>Dans le jeu de données, l'heure d'un accident est indiqué à la minute près. Pour réaliser une étude temporelle, je voulais regrouper les accidents par classes : une classe par heure. Par exemple, tous les accidents ayant eu lieu entre 14h et 14h59 devaient appartenir à la même classe nommée 14.</p>
+<p>Pour cela, il est facile de créer une nouvelle variable <em>horaire</em> grâce à la fonction <em>Time.hour</em> qui récupère l'heure d'une variable de type <em>heure</em>.</p>
+<p><img alt="horaire" src="../../img/PBI_acc/heure.png" /></p>
+<p><strong>Chargement des données</strong></p>
+<p>Une fois toutes ces opérations faites, il ne reste plus qu'à charger les données dans Power BI.</p>
+<h2 id="relations-entre-les-tables">Relations entre les tables</h2>
+<p>Avant de se lancer dans un tableau de bord, il faut relier les tables entre elles. Ici, les différentes tables sont à relier sur le numéro d'accident <em>Num_Acc</em>. Cela se fait dans l'onglet <em>modèle</em> de Power BI. On remarquera sur l'image ci-dessous une table <em>Dates</em>. Cette table ne fait pas partie du jeu de données initial. Je l'ai créée pour faire une étude temporelle des accidents (voir paragraphe correspondant).</p>
+<p><img alt="relation" src="../../img/PBI_acc/relation.png" /></p>
+<h2 id="creation-du-tableau-de-bord">Création du tableau de bord</h2>
+<p>Comme dit plus haut, le but de ce travail n'était pas de faire un rapport ou un tableau de bord exhaustif de toutes les informations que l'on peut tirer de ce jeu de données. Je ne présenterai donc que quelques pages avec des visualisations graphiques permettant de tirer quelques enseignements du jeu de données.</p>
+<h3 id="aspect-des-pages">Aspect des pages</h3>
+<p>Avant de me lancer dans la création des différentes pages, j'ai réfléchi à la forme qu'elles prendraient. Voici ce que j'ai décidé :</p>
+<ul>
+<li>Présence d'une page d'accueil</li>
+<li>Présence d'un titre pour chaque page</li>
+<li>Présence de boutons permettant de naviguer de pages en pages</li>
+</ul>
+<p>Une fois ces éléments mis en place, on peut créer pour chaque page les visualisations souhaitées. Voici les exemples de la page d'accueil et d'une page du tableau de bord :</p>
+<p><img alt="accueil" src="../../img/PBI_acc/accueil.png" /></p>
+<p><img alt="apercu_gen" src="../../img/PBI_acc/apercu_gen.png" /></p>
+<p>Je ne m'étendrai pas sur la page <em>Aperçu général</em> qui n'est constituée que de graphiques basiques. Passons directement à la page sur les accidents mortels.</p>
+<h3 id="page-sur-les-accidents-mortels-creation-de-nouvelles-mesures">Page sur les accidents mortels - Création de nouvelles mesures</h3>
+<p><img alt="mortels1" src="../../img/PBI_acc/mortels1.png" /></p>
+<p>Pour constituer la page ci-dessus, j'ai dû créer de nouvelles mesures et donc utiliser les DAX. La première est le nombre d'accidents mortels. Pour cela, il suffit de compter dans la table <em>caractéristiques</em> le nombre de numéros d'accident pour lesquels il y a eu un mort (gravité égale à 2 dans la table <em>usagers</em>). Pour filtrer les données suivant la gravité de l'accident, on a besoin d'utiliser la fonction <code>CALCULATE</code>.</p>
+<p><img alt="nb_mortels" src="../../img/PBI_acc/nb_acc_mortels.png" /></p>
+<p>La deuxième mesure créée est le nombre de morts. Cela se fait de la même manière en comptant cette fois le nombre d'usagers dont la gravité de l'accident est établie à 2.</p>
+<p><img alt="nb_morts" src="../../img/PBI_acc/nb_morts.png" /></p>
+<p>Quant à la variable comptabilisant le nombre d'accidents, il s'agit simplement d'un décompte du nombre de numéros d'accident.</p>
+<p><img alt="nb_acc" src="../../img/PBI_acc/nb_acc.png" /></p>
+<p>Enfin, j'ai eu besoin de calculer le pourcentage d'accidents mortels parmi tous les accidents. Cela se fait très facilement à l'aide des mesures créées précédemment.</p>
+<p><img alt="pourc_mortels" src="../../img/PBI_acc/pourc_mortels.png" /></p>
+<h3 id="etude-temporelle-travail-sur-les-dates">Étude temporelle - Travail sur les dates</h3>
+<p><img alt="mortels2" src="../../img/PBI_acc/mortels2_temp.png" /></p>
+<p><strong>Création d'une variable date</strong></p>
+<p>Le jeu de données comporte trois colonnes pour les dates : une pour l'année, une pour le mois et une pour le jour. Cela est très pratique si l'on veut par exemple analyser le nombre d'accidents par mois. Mais on peut être amené à utiliser la date complète d'un accident. Pour cela, il est plus pratique d'avoir également une variable contenant cette date. Il est facile d'obtenir cette colonne grâce à la fonction <code>Date</code> à laquelle il suffit de passer l'année, le mois et le jour comme paramètres.</p>
+<p><img alt="date" src="../../img/PBI_acc/date.png" /></p>
+<p><strong>Création d'une table Dates</strong></p>
+<p>En créant la variable <em>date</em>, on obtient pour chaque accident la date à laquelle il a eu lieu. Même s'il y a peu de chances que cela se produise, il peut exister un jour sans accident et donc manquer une date parmi toutes les dates de l'année. Or pour certains calculs ou graphiques, il est important d'avoir une variable contenant toutes les dates comprises entre la première et la dernière date du jeu de données. J'ai donc créé une nouvelle table <em>Dates</em> contenant une variable <em>Date</em> possédant toutes ces dates. Pour cela, on peut utiliser la fonction <code>CALENDAR</code> et lui passer en paramètres la première et la dernière date du jeu de données.</p>
+<p><img alt="table_date" src="../../img/PBI_acc/table_date.png" /></p>
+<p>Dans cette table, j'ai également décidé de créer une colonne contenant le numéro du jour de la semaine et une autre contenant le nom du jour de la semaine. Cela peut permettre d'étudier les accidents en fonction du jour de la semaine.</p>
+<p><img alt="jour_sem" src="../../img/PBI_acc/jour_sem.png" /></p>
+<p><img alt="nom_jour" src="../../img/PBI_acc/nom_jour.png" /></p>
+<p>Enfin, voulant comparer les accidents ayant lieu le week-end et ceux de la semaine, j'ai créé une variable <em>weekend</em> en utilisant une simple structure conditionnelle.</p>
+<p><img alt="weekend" src="../../img/PBI_acc/weekend.png" /></p>
+<p>Voici la table <em>Dates</em> créée :</p>
+<p><img alt="table_dates_compl" src="../../img/PBI_acc/table_dates_compl.png" /></p>
+<p>A partir de toutes les mesures, tables et colonnes créées, j'ai pu organiser la page présentée au début de cette section sur les accidents mortels en fonction de différentes variables temporelles (moi, heure, jour de la semaine).</p>
+<p>On peut noter que j'ai inclu des <em>slicers/segments</em> qui sont des filtres permettant d'inspecter les données en se focalisant sur des types particuliers d'accidents. Par exemple, l'image ci-dessous montre la page après avoir sélectionné uniquement les accidents survenus sur un trajet domicile-travail. On voit bien apparaître les deux pics d'horaires d'entrée et de sortie du travail sur la courbe présentant le nombre d'accidents. En revanche, on constate que ce n'est pas sur ces horaires que la proportion d'accidents mortels est la plus élevée.</p>
+<p><img alt="mortels3" src="../../img/PBI_acc/mortels3_travail.png" /></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "navigation.indexes", "toc.integrate"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.407015b8.min.js"></script>
+      
+    
+  </body>
+</html>
