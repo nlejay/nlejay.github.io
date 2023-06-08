@@ -756,8 +756,8 @@ Cette page est un résumé du travail effectué. Le notebook contenant l'ensembl
 <p><img alt="med_pop_geo_com" src="../../img/medecins/med_pop_geo_com.png" /></p>
 <p>Il restait alors à faire la jointure avec les données sur les bassins de vie. Le problème était que je ne disposais pas de colonnes communes dans les deux tables <em>med_pop_geo_com</em> et <em>bassins</em>. J'ai contourné le problème en faisant une <strong>jointure spatiale</strong>.</p>
 <p>Pour faire cette jointure spatiale, j'ai décidé de calculer les coordonnées du centre géographique de chaque commune. Puis j'ai fait une jointure en sélectionnant pour chaque bassin de vie les communes dont le centre se situe dans le bassin. J'ai utilisé le paramètre <code>contains</code> de la méthode <code>sjoin</code> du module <code>geopandas</code>. J'ai appelé la dataframe finale <em>df_total</em>.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Avec les jointures, on se retrouve avec une dataframe et non une geodataframe. Il faut faire une conversion</span>
-<span class="n">med_pop_geo_com</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">med_pop_geo_com</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Calcul du centroid de chaque commune / utilisation d&#39;un crs avec coordonnées en metres pour calcul du centroid</span>
+<span class="n">med_pop_geo_com</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">med_pop_geo_com</span><span class="p">)</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="n">crs</span><span class="o">=</span><span class="mi">3857</span><span class="p">)</span>   
 
 <span class="c1">#Création des centres de chaque commune</span>
 <span class="n">med_pop_geo_com</span><span class="p">[</span><span class="s1">&#39;centre&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">med_pop_geo_com</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">centroid</span>
@@ -768,9 +768,9 @@ Cette page est un résumé du travail effectué. Le notebook contenant l'ensembl
 <span class="c1">#Renommer la colonne centre avec le nom geometry (pour la jointure avec sjoin)</span>
 <span class="n">med_pop_geo_com</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;centre&#39;</span><span class="p">:</span><span class="s1">&#39;geometry&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-<span class="c1"># Jointure</span>
-<span class="n">df_total</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">sjoin</span><span class="p">(</span><span class="n">bassins</span><span class="p">,</span> <span class="n">med_pop_geo_com</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">predicate</span><span class="o">=</span><span class="s1">&#39;contains&#39;</span><span class="p">)</span>
-<span class="n">df_total</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="c1">#retour à un crs en degrés</span>
+<span class="n">med_pop_geo_com</span> <span class="o">=</span> <span class="n">med_pop_geo_com</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="n">crs</span><span class="o">=</span><span class="mi">4326</span><span class="p">)</span>   
+<span class="n">med_pop_geo_com</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </code></pre></div>
 <p><img alt="df_total" src="../../img/medecins/df_total.png" /></p>
 <h2 id="calcul-des-densites">Calcul des densités</h2>
