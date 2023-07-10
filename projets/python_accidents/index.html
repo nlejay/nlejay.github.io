@@ -1,0 +1,767 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://monsite.fr/projets/python_accidents/">
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../medecins/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
+    
+    
+      
+        <title>Accidents de la route - Partie 1 - Portfolio de projets data / Nicolas Lejay</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#etude-des-accidents-corporels-de-la-circulation-routiere-entre-2005-et-2021" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Portfolio de projets data / Nicolas Lejay" class="md-header__button md-logo" aria-label="Portfolio de projets data / Nicolas Lejay" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Portfolio de projets data / Nicolas Lejay
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Accidents de la route - Partie 1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Accueil
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        Projets
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../APropos/" class="md-tabs__link">
+        Mon parcours
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Portfolio de projets data / Nicolas Lejay" class="md-nav__button md-logo" aria-label="Portfolio de projets data / Nicolas Lejay" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Portfolio de projets data / Nicolas Lejay
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Accueil
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Projets
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Projets
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          --------- Python ---------
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          --------- Python ---------
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Accidents de la route - Partie 1
+      </a>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../medecins/" class="md-nav__link">
+        Densité de médecins
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../seismes/" class="md-nav__link">
+        Séismes dans le monde en 2022
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          --------- Power BI ---------
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          --------- Power BI ---------
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PBI_accidents/" class="md-nav__link">
+        Accidents de la route
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+          --------- Tableur ---------
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          --------- Tableur ---------
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ips/" class="md-nav__link">
+        Indice de Position Sociale des lycées
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Mon parcours
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Mon parcours
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../APropos/" class="md-nav__link">
+        A propos de moi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../competences/" class="md-nav__link">
+        Compétences pour la Data Science
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../experience/" class="md-nav__link">
+        Expérience professionnelle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../formation/" class="md-nav__link">
+        Formation/Diplômes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="etude-des-accidents-corporels-de-la-circulation-routiere-entre-2005-et-2021">Étude des accidents corporels de la circulation routière entre 2005 et 2021</h1>
+<h1 id="partie-1-etude-temporelle">Partie 1 : Étude temporelle</h1>
+<hr />
+<figure>
+   <center>
+      <a target="_blank" href="../../img/python_acc/carte_france.png">
+         <img src="../../img/python_acc/carte_france.png" alt="carte_accidents" width=75%>
+      </a>
+   </center>
+</figure>
+
+<h2 id="competences-mises-en-uvre">Compétences mises en œuvre</h2>
+<hr />
+<ul>
+<li>Nettoyage de données</li>
+<li>Manipulation de données</li>
+<li>Jointures de tables</li>
+<li>Visualisation de données</li>
+<li>Tests statistiques</li>
+</ul>
+<h2 id="problematique">Problématique</h2>
+<hr />
+<p>Ce projet a été réalisé dans le cadre de ma formation au D.U. Data Analyst à l'université de Cergy. Mon but était de mener une étude temporelle des accidents corporels de la circulation routière et d'analyser l'influence des conditions météorologiques et de limunosité sur la gravité des accidents. Cette partie présente l'étude temporelle.</p>
+<p>Le jeu de données est fourni par l' Observatoire National Interministériel de la Sécurité Routière (ONISR) sur le site <a href="https://www.data.gouv.fr/fr/datasets/bases-de-donnees-annuelles-des-accidents-corporels-de-la-circulation-routiere-annees-de-2005-a-2021/">https://www.data.gouv.fr/</a>. Il contient les informations sur les accidents corporels de la circulation routière, c'est à dire sur les accidents ayant causé au moins un blessé (par commodité, on utilisera simplement le terme « accidents » dans la suite). Il est constitué de quatre fichiers csv par année :</p>
+<ul>
+<li>le fichier <em>caracteristiques</em> contient les données des caractéristiques de l'accident (date, heure, conditions météo,...)</li>
+<li>le fichier <em>lieux</em> contient les données sur le type de route, l'état de la surface (normale, mouillée,...),...</li>
+<li>le fichier <em>vehicules</em> contient les informations sur les véhicules impliqués dans l'accident</li>
+<li>le fichier <em>usagers</em> contient les informations sur les personnes impliquées dans l'accident</li>
+</ul>
+<p>L'ensemble du projet est codé en python et contient trois notebooks accessible sur mon <a href="https://github.com/nlejay/accidents_circulation">compte github</a></p>
+<h2 id="concatenation-nettoyage-et-chargement-des-donnees">Concaténation, nettoyage et chargement des données</h2>
+<hr />
+<p>La première opération a été de concaténer les données de chaque année pour obtenir un jeu correspondant à l'ensemble de la période 2005-2021. A l'issue de cette étape, j'ai obtenu quatre fichiers (<em>caracteristiques</em>, <em>usagers</em>, <em>lieux</em> et <em>vehicules</em>). Je ne présenterai pas ici les étapes de ce travail. Pour plus de détails, se référer au <a href="https://github.com/nlejay/accidents_circulation/blob/main/accidents_route_concatenation_04_23.ipynb">notebook</a>.</p>
+<p>La deuxième étape a été de nettoyer les données des quatre fichiers. Un gros travail de vérification et de recodage des données a été nécessaire. Pour plus de détails, se référer au <a href="https://github.com/nlejay/accidents_circulation/blob/main/accidents_route_nettoyage.ipynb">notebook</a>.</p>
+<p>L'ensemble de l'étude dont les résultats sont présentés ci-dessous est disponible dans ce <a href="https://github.com/nlejay/accidents_circulation/blob/main/projet_acc_route.ipynb">troisième notebook</a>. Le code étant long, je ne présenterai ici que les résultats obtenus.</p>
+<h2 id="evolution-du-nombre-daccidents-de-morts-et-de-blesses-hospitalises">Évolution du nombre d'accidents, de morts et de blessés hospitalisés</h2>
+<hr />
+<h3 id="quantification-et-representation-de-cette-evolution">Quantification et représentation de cette évolution</h3>
+<p>Sur l'ensemble des 17 années, on dénombre 1 121 571 accidents soit une moyenne de 65 975 accidents par an. Mais comment a évolué le nombre d'accidents au cours de la période 2005-2021 ? </p>
+<p><img alt="evol_acc" src="../../img/python_acc/evol_acc.png" /></p>
+<p>On constate une baisse du nombre d'accidents entre 2005 et 2013. Le nombre d'accidents est passé 87 000 à un peu plus de 58 000 sur cette période. Depuis, on observe une stabilisation entre 55 000 et 60 000 accidents. La chute brutale observée en 2020 (47 744 accidents seulement) est bien-sûr due aux confinements déclenchés suite à l'épidémie de Covid-19. </p>
+<p>Qu'en est-il du nombre de morts ?</p>
+<p><img alt="evol_morts" src="../../img/python_acc/evol_morts.png" /></p>
+<p>Le nombre de morts a suivi à peu près la même évolution que le nombre d'accidents. Il est passé de 5 500 en 2005 à 3 400 en 2013. Depuis, il est relativement stable. Là-aussi, on remarque un nombre très inférieur en 2020 avec seulement 2780 morts. </p>
+<p>Regardons maintenant le nombre de blessés hospitalisés.</p>
+<p><img alt="evol_blesses" src="../../img/python_acc/evol_blesses.png" /></p>
+<p>L'évolution est la même que précédemment jusqu'en 2017. Mais on constate une forte baisse à partir de 2018. Il faut être prudent dans l'interprétation de ce constat. En effet, l'ONISR précise que le processus de recensement des blessés a changé en 2018 et qu'il n'est pas possible de comparer le nombre de blessés avant et après 2018.</p>
+<h3 id="correlation-entre-le-nombre-annuel-daccidents-et-de-morts">Corrélation entre le nombre annuel d'accidents et de morts</h3>
+<p><img alt="morts_vs_acc" src="../../img/python_acc/corr_acc_morts.png" /></p>
+<p>Le diagramme présentant ci-dessus le nombre annuel de morts en fonction du nombre annuel d'accidents suggère une très forte corrélation entre les deux. Le test de corrélation de Spearman confirme une corrélation très significative au risque de 5 % (p &lt; 0.0001***) et très forte (r = 0.97).</p>
+<h3 id="correlation-entre-le-nombre-annuel-daccidents-et-de-blesses-hospitalises">Corrélation entre le nombre annuel d'accidents et de blessés hospitalisés</h3>
+<p><img alt="blesses_vs_acc" src="../../img/python_acc/corr_acc_bl.png" /></p>
+<p>De la même manière, le graphique présentant le nombre de bléssés hospitalisés en fonction du nombre d'accidents suggère une corrélation positive entre les deux variables. Le test de corrélation de Spearman confirme cette hypothèse au risque de 5 % : la corrélation est très significative (p &lt; 0.0001***) et très forte (r = 0.95).</p>
+<h2 id="les-mois-les-plus-accidentogenes">Les mois les plus accidentogènes</h2>
+<hr />
+<p>Dans cette partie, l'année 2020 est exclue. En effet, les confinements du printemps et de la fin de l'année ont eu un effet qui fausserait les chiffres et leur interprétation.</p>
+<p>Sur l'ensemble des autres années, on observe un nombre mensuel moyen d'accidents de 5 593. Mais cette moyenne cache des disparités. En effet, le nombre mensuel d'accidents a varié entre 3 350 et 8 469 et on observe un écart-type égal à 1053. </p>
+<p>On peut se demander s'il existe des mois plus accidentogènes que d'autres. Le diagramme ci-dessous montre que le nombre mensuel moyen d'accidents est plus élevé en octobre, juin et septembre avec respectivement 6 374, 6 325 et 6 173 accidents en moyenne. Les diagrammes en boîtes montrent également que les médianes de ces trois mois sont plus élevées que les autres (médianes respectives de 5 940, 5 870 et 5 778). A l'opposé, le mois de février ne compte qu'une moyenne de 4 485 accidents et une médiane de 4 255. </p>
+<p>Le test de Kruskal-Wallis permet d'affirmer que la différence des médianes est significative (𝜒²(11) = 56.59, 𝑝 &lt; 0.001***).</p>
+<p><img alt="accidents_moy_mois" src="../../img/python_acc/acc_mens_moy.png" />
+<img alt="accidents_boites_mois" src="../../img/python_acc/acc_mens_med.png" /></p>
+<h2 id="taux-de-mortalite-par-mois-de-lannee">Taux de mortalité par mois de l'année</h2>
+<hr />
+<p>Dans cette partie, nous utiliserons le taux de mortalité défini comme étant le nombre de morts pour 100 accidents. On peut remarquer que les mois de juillet, août et décembre sont ceux qui ont les taux de mortalité moyens les plus importants. Les autres mois ont des taux de mortalité moyens plus proches les uns des autres. </p>
+<p><img alt="tx_mort_moy_mois" src="../../img/python_acc/tx_mort_mois_moy.png" />
+<img alt="tx_mort_boites_mois" src="../../img/python_acc/tx_mort_mois_med.png" /></p>
+<p>Une ANOVA permet de conclure à une différence très significative des taux de mortalité (F(11, 180)=23.18, p&lt;0.000***). Le test de comparaisons multiples de Tuckey révèle une différence significative du taux de mortalité moyen du mois d'août avec tous les autres mois (à l'exception de juillet). Quand à celui du mois de juillet, il est significativement différent de celui des autres mois à l'exception des mois de décembre et août. Enfin, si on excepte les mois de juillet et août, le taux de mortalité moyen du mois de décembre est significativement différent de celui des autres mois mise à part février.</p>
+<h2 id="taux-de-mortalite-par-jour-de-la-semaine">Taux de mortalité par jour de la semaine</h2>
+<hr />
+<p>Quel que soit le mois de l'année, le taux de mortalité est plus important le week-end qu'en semaine.</p>
+<p><img alt="tx_mort_moy_jours" src="../../img/python_acc/tx_mort_jour_moy.png" /></p>
+<p>Si on calcule la différence entre le taux de mortalité le week-end et la semaine, on remarque que les mois de juillet et août ont une des différences les plus faibles. Le grand taux de mortalité de ces deux mois ne s'explique donc pas par les accidents causés lors des week-ends de grands départs en vacances. Leur taux de mortalité reste plus élevé que celui des autres mois quel que soit le jour de la semaine.</p>
+<p><img alt="diff_tx_mort_we_sem" src="../../img/python_acc/diff_tx_mort_we_sem.png" /></p>
+<h2 id="nombre-moyen-daccidents-par-heure-de-la-journee">Nombre moyen d'accidents par heure de la journée</h2>
+<hr />
+<p>L'étude du nombre d'accidents par heure de la journée a été effectuée uniquement sur l'année 2019. En effet, dans le jeu de données le codage des heures lors des années précédentes est ambigü. Pour ne pas risquer de mauvaise interprétation, ces années n'ont pas été prises en compte. De plus, les confinements et couvre-feux des années 2020 et 2021 faussent les données.</p>
+<p><img alt="diff_tx_mort_we_sem" src="../../img/python_acc/nb_acc_heure.png" /></p>
+<p>Sur le graphique ci-dessus, on remarque deux pics : un pic le matin principalement entre 8h et 9h, et un pic en fin d'après-midi entre 17h et 19h. On peut penser aux horaires de trajets domicile-travail, ce qui se confirme pour le pic du matin si on regarde la proportion d'accidents par type de trajet (voir ci-dessous). Cependant, le soir ce sont les trajets pour loisir qui prédominent. Il faut toutefois prendre cette information avec précaution : un certain nombre de personnes peuvent aller faire du sport ou retrouver des amis directement après avoir quitté le travail, sans repasser par chez eux. Ce type de trajets est peut-être classé dans les trajets loisirs.</p>
+<p><img alt="diff_tx_mort_we_sem" src="../../img/python_acc/rep_acc_type.png" /></p>
+<h2 id="taux-de-mortalite-par-heure-de-la-journee">Taux de mortalité par heure de la journée</h2>
+<hr />
+<p>Si le nombre d'accidents est plus important en journée, le taux de mortalité des accidents est plus important la nuit. C'est en effet entre minuit et 7h qu'il est le plus haut avec un pic à 12,5 morts pour cent accidents corporels entre 4h et 5h.</p>
+<p><img alt="diff_tx_mort_we_sem" src="../../img/python_acc/tx_mort_heure.png" /></p>
+<h2 id="carte-interactive-des-accidents-dans-les-cotes-darmor">Carte interactive des accidents dans les Côtes d'Armor</h2>
+<hr />
+<p>La carte ci-dessous présente les accidents dans les Côtes d'Armor sur la période 2019-2021. Ce sont les seules années pour lesquelles le jeu de données donne la latitude et la longitude de chaque accident.</p>
+<iframe src="../../img/python_acc/carte22.html" width="100%" height="500"></iframe>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "navigation.indexes", "toc.integrate"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  </body>
+</html>
