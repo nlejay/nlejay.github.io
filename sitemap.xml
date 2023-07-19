@@ -2,57 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://monsite.fr/</loc>
-         <lastmod>2023-07-14</lastmod>
+         <lastmod>2023-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monsite.fr/APropos/</loc>
-         <lastmod>2023-07-14</lastmod>
+         <lastmod>2023-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monsite.fr/competences/</loc>
-         <lastmod>2023-07-14</lastmod>
+         <lastmod>2023-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monsite.fr/experience/</loc>
-         <lastmod>2023-07-14</lastmod>
+         <lastmod>2023-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monsite.fr/formation/</loc>
-         <lastmod>2023-07-14</lastmod>
+         <lastmod>2023-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monsite.fr/projets/PBI_accidents/</loc>
-         <lastmod>2023-07-14</lastmod>
+         <lastmod>2023-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monsite.fr/projets/ips/</loc>
-         <lastmod>2023-07-14</lastmod>
+         <lastmod>2023-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monsite.fr/projets/medecins/</loc>
-         <lastmod>2023-07-14</lastmod>
+         <lastmod>2023-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monsite.fr/projets/python_accidents/</loc>
-         <lastmod>2023-07-14</lastmod>
+         <lastmod>2023-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monsite.fr/projets/python_accidents2/</loc>
-         <lastmod>2023-07-14</lastmod>
+         <lastmod>2023-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monsite.fr/projets/seismes/</loc>
-         <lastmod>2023-07-14</lastmod>
+         <lastmod>2023-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://monsite.fr/projets/sql_football/</loc>
+         <lastmod>2023-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
